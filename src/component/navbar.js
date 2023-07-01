@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
@@ -73,26 +74,6 @@ function NavBar() {
     typography: {
       fontFamily: "Prompt",
     },
-    // palette: {
-    //   primary: {
-    //     main: "#9AC5F4",
-    //   },
-    //   secondary: {
-    //     main: "#99DBF5",
-    //   },
-    //   tertiary: {
-    //     main: "#A7ECEE",
-    //   },
-    //   quarternary: {
-    //     main: "#FFEEBB",
-    //   },
-    //   black: {
-    //     main: "#454545",
-    //   },
-    //   white: {
-    //     main: "#F5F5F5",
-    //   },
-    // },
   });
 
   return (
@@ -175,7 +156,7 @@ function NavBar() {
               <Link
                 component="a"
                 href="/"
-                underline="hover"
+                underline="none"
                 color="inherit"
                 sx={{
                   "&:hover": {
@@ -195,8 +176,8 @@ function NavBar() {
 
               <Link
                 href="/"
-                underline="hover"
-                color="inherit"
+                underline="none"
+                color="#9AC5F4"
                 sx={{
                   "&:hover": {
                     color: "#9AC5F4",
@@ -208,12 +189,13 @@ function NavBar() {
                 >
                   เข้าเรียน
                 </Typography>
+                <div className="underline" />
               </Link>
 
               <Link
                 component="a"
                 href="/"
-                underline="hover"
+                underline="none"
                 color="inherit"
                 sx={{
                   "&:hover": {

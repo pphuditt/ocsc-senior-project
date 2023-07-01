@@ -5,16 +5,26 @@
   background-color: #a7a8ab;
 }
 
-.menu::after {
-  opacity: 1;
-  transform: scale(1, 1);
-  background-color: #9ac5f4;
-  transition: all 0.2s ease-out;
-  position: absolute;
-  left: 16;
-  width: calc(100%-32px);
-  bottom: 0px;
+.underline {
+  display: block;
+  width: calc(100% - 32px);
   height: 3px;
+  background-color: #9ac5f4;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+a::after {
   content: "";
   display: block;
+  width: 0;
+  height: 3px;
+  background-color: #9ac5f4;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all ease-out 0.2s;
+}
+
+a:hover::after {
+  width: calc(100% - 32px);
 }
